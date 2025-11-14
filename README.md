@@ -2,9 +2,9 @@
 
 OSINT Shield is a prototype that ingests open-source intelligence, enriches it with lightweight NLP, and surfaces clustered hybrid-threat campaigns on a web dashboard.
 
-## Why
-
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/414924a4-b5cb-4a05-8128-4b4a15bcff6e" />
+
+## Why
 
 European operators need early indicators of hybrid operations that mix cyber, disinfo, and physical disruption. OSINT Shield fuses public-style data, scores relevance, extracts entities, groups related events, and ranks the most urgent campaigns.
 
