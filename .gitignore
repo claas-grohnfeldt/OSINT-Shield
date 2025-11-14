@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+.env
+.venv
+.python-version
+
+# uv
+.uv/
+
+# Node
+node_modules/
+dist/
+*.log
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/

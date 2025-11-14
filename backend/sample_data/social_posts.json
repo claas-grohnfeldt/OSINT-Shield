@@ -1,0 +1,35 @@
+[
+  {
+    "id": "soc-001",
+    "timestamp": "2024-05-18T09:30:00Z",
+    "platform": "birdie",
+    "country": "PL",
+    "sector": "energy",
+    "language": "en",
+    "text": "Activists report unidentified drones scouting the Gdansk LNG terminal. Local police confirm network outages at the valve control station.",
+    "geo": {"lat": 54.390, "lon": 18.658},
+    "engagement": 842
+  },
+  {
+    "id": "soc-002",
+    "timestamp": "2024-05-19T14:10:00Z",
+    "platform": "mastonet",
+    "country": "DE",
+    "sector": "logistics",
+    "language": "de",
+    "text": "Rail cargo operators near Rostock warn about GPS spoofing affecting signalling for military transports.",
+    "geo": {"lat": 54.089, "lon": 12.142},
+    "engagement": 312
+  },
+  {
+    "id": "soc-003",
+    "timestamp": "2024-05-20T06:45:00Z",
+    "platform": "mastonet",
+    "country": "RO",
+    "sector": "telecom",
+    "language": "ro",
+    "text": "ISP engineers cite repeated BGP hijacks targeting fibre landing station linked to NATO networks.",
+    "geo": {"lat": 44.174, "lon": 28.651},
+    "engagement": 421
+  }
+]

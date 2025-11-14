@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: osint-shield-backend
+Version: 0.1.0
+Summary: OSINT Shield backend service providing ingestion, NLP, and APIs
+Author-email: OSINT Shield Team <security@osintshield.eu>
+Project-URL: Homepage, https://github.com/example/osint-shield
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.111.0
+Requires-Dist: uvicorn[standard]>=0.29.0
+Requires-Dist: sqlalchemy>=2.0.30
+Requires-Dist: greenlet>=3.0.3
+Requires-Dist: pydantic>=2.7.0
+Requires-Dist: pydantic-settings>=2.2.1
+Requires-Dist: aiosqlite>=0.20.0
+Requires-Dist: httpx>=0.27.0
+Requires-Dist: scikit-learn>=1.4.2
+Requires-Dist: spacy>=3.7.4
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: alembic>=1.13.1
+
+# OSINT Shield – Backend
+
+FastAPI + SQLAlchemy service that ingests OSINT-style feeds, enriches them with NLP, and exposes campaign + event APIs.
+
+## Tech stack
+
+- Python 3.12+, FastAPI, SQLAlchemy 2.x, Pydantic v2
+- SQLite (dev) managed through async SQLAlchemy
+- Lightweight NLP: TF-IDF classifier, spaCy + regex NER, TF-IDF clustering
+- uv for dependency and environment management
+
+## Getting started
+
+```bash
+cd backend
+uv sync
+uv run python -m app.ingestion.sample_loader  # load sample OSINT data
+uv run uvicorn app.main:app --reload --port 8000
+```
+
+Visit `http://localhost:8000/docs` for interactive API docs.
+
+## Data model
+
+- **Source** – describes where an event originated (social, news, technical, future classified feeds).
+- **Event** – normalized payload with timestamp, country, sector, language, free text, relevance score.
+- **Entity** – named entities / indicators extracted from the event.
+- **Campaign** – grouped events with shared features + computed risk score.
+
+## NLP pipeline
+
+1. `RelevanceClassifier` – TF-IDF + Logistic Regression binary classifier.
+2. `ThreatNER` – spaCy entity ruler + regex for IPs/domains/CVEs/actors.
+3. `cluster_events` – TF-IDF vectors -> Agglomerative clustering.
+4. `compute_campaign_risk` – heuristic scoring using event counts, sector weight, and geographic diversity.
+
+## Tests
+
+```bash
+uv run pytest
+```
+
+Tests spin up an isolated SQLite DB, run the ingestion loader, and hit the FastAPI endpoints.

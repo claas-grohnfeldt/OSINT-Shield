@@ -1,0 +1,26 @@
+[
+  {
+    "id": "cert-001",
+    "timestamp": "2024-05-17T08:00:00Z",
+    "publisher": "ENISA Labs",
+    "country": "PL",
+    "sector": "energy",
+    "language": "en",
+    "title": "Killnet affiliated cluster pivots to LNG telemetry",
+    "body": "Telemetry shows CVE-2023-4966 exploitation against valve PLCs with lateral movement from 185.210.219.44.",
+    "geo": {"lat": 54.39, "lon": 18.66},
+    "indicators": ["185.210.219.44", "controlnet-kontrol.com", "CVE-2023-4966"]
+  },
+  {
+    "id": "cert-002",
+    "timestamp": "2024-05-19T18:20:00Z",
+    "publisher": "Baltic CERT",
+    "country": "DE",
+    "sector": "defence",
+    "language": "en",
+    "title": "Sandworm phishing wave hits contractors",
+    "body": "Dozens of suppliers received lure documents referencing Rostock convoys; payload reaches c2.europe-def.net.",
+    "geo": {"lat": 54.1, "lon": 12.15},
+    "indicators": ["c2.europe-def.net", "Sandworm"]
+  }
+]

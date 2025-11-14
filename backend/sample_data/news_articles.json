@@ -1,0 +1,26 @@
+[
+  {
+    "id": "news-001",
+    "timestamp": "2024-05-18T12:00:00Z",
+    "outlet": "Brussels Secure",
+    "country": "PL",
+    "sector": "energy",
+    "language": "en",
+    "headline": "Polish LNG site faces coordinated cyber probing",
+    "summary": "Operators confirm abnormal traffic from IP ranges tied to Killnet while drones observed nearby.",
+    "geo": {"lat": 54.39, "lon": 18.66},
+    "url": "https://news.example.com/polish-lng"
+  },
+  {
+    "id": "news-002",
+    "timestamp": "2024-05-20T07:15:00Z",
+    "outlet": "EU Transport Monitor",
+    "country": "DE",
+    "sector": "logistics",
+    "language": "en",
+    "headline": "German military rail disrupted by jamming",
+    "summary": "Bundeswehr confirms timing anomalies on Rostock line, suspects hybrid operation targeting ammo flows.",
+    "geo": {"lat": 54.1, "lon": 12.15},
+    "url": "https://news.example.com/rostock-jamming"
+  }
+]
