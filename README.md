@@ -1,6 +1,6 @@
 # OSINT Shield – Early Warning for Hybrid Threats Against EU Critical Infrastructure
 
-OSINT Shield is a GitHub-ready prototype that ingests open-source intelligence, enriches it with lightweight NLP, and surfaces clustered hybrid-threat campaigns on a web dashboard.
+OSINT Shield is a prototype that ingests open-source intelligence, enriches it with lightweight NLP, and surfaces clustered hybrid-threat campaigns on a web dashboard.
 
 ## Why
 
